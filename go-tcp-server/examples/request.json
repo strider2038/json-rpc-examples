@@ -1,0 +1,36 @@
+[
+  {
+    "jsonrpc": "2.0",
+    "method": "math.sum",
+    "params": [
+      20,
+      3,
+      11
+    ],
+    "id": 1
+  },
+  {
+    "jsonrpc": "2.0",
+    "method": "math.sum",
+    "params": [
+      1,
+      2,
+      3
+    ],
+    "id": 2
+  },
+  {
+    "jsonrpc": "2.0",
+    "method": "action.alert",
+    "params": {
+      "message": "Hello, World!"
+    },
+    "id": 3
+  },
+  {
+    "jsonrpc": "2.0",
+    "method": "action.status",
+    "params": {},
+    "id": 4
+  }
+]
