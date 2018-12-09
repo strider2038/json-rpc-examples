@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  json_rpc_client:
+    image: strider2038/php-cli-dev
+    container_name: json_rpc_client
+    network_mode: host
+    environment:
+      APP_ENV: dev
+    volumes:
+      - .:/app
+    ports:
+      - "9001:9000"

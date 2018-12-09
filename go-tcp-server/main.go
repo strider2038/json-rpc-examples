@@ -66,7 +66,9 @@ func main() {
 	}
 
 	mux := jrpc2.ServiceMapper{
-		"math": jrpc2.MapAssigner{"sum": jrpc2.NewHandler(sum)},
+		"math": jrpc2.MapAssigner{
+			"sum": jrpc2.NewHandler(sum),
+		},
 		"action": jrpc2.MapAssigner{
 			"alert":  jrpc2.NewHandler(alert),
 			"status": jrpc2.NewHandler(status),
@@ -85,7 +87,7 @@ func main() {
 			Logger:      log.New(os.Stderr, "[jrpc2.Server] ", log.LstdFlags|log.Lshortfile),
 			Concurrency: *maxTasks,
 			Metrics:     metrics.New(),
-			AllowPush:   true,
+			AllowPush:   false,
 		},
 	})
 
