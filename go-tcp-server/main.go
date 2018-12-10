@@ -9,6 +9,7 @@
 package main
 
 import (
+	"bitbucket.org/creachadair/jrpc2/channel"
 	"context"
 	"flag"
 	"fmt"
@@ -83,6 +84,7 @@ func main() {
 	log.Printf("Listening at %v...", lst.Addr())
 
 	err = server.Loop(lst, mux, &server.LoopOptions{
+		Framing: channel.Line,
 		ServerOptions: &jrpc2.ServerOptions{
 			Logger:      log.New(os.Stderr, "[jrpc2.Server] ", log.LstdFlags|log.Lshortfile),
 			Concurrency: *maxTasks,
