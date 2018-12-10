@@ -1,0 +1,14 @@
+{
+    "name": "strider2038/json-rpc-examples",
+    "type": "project",
+    "require": {
+        "tivoka/tivoka": "^3.5",
+        "fguillot/json-rpc": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "license": "MIT"
+}
